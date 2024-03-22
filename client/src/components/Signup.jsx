@@ -84,7 +84,10 @@ const Signup = () => {
               <input onChange={(e) => setPassword(e.target.value)} type="password" className="form-control" id="password" />
             </div>
             <div className="d-grid gap-2">
-              <button onClick={handleSignup} type="submit" className="btn btn-secondary">CREATE ACCOUNT</button>
+              <button onClick={(e) => {
+                e.preventDefault();
+                handleSignup();
+              }} type="submit" className="btn btn-secondary">CREATE ACCOUNT</button>
             </div>
           </form>
           <div className='text-center' >Have an account? <b><Link to={'/login'}>Login</Link></b></div>
