@@ -19,51 +19,6 @@ const Navbar = () => {
     }
 
     return (
-        // <nav className="navbar navbar-light navbar-expand-md bg-faded justify-content-center">
-        //     <div className="container" style={{ margin: '0px', maxWidth: '100%' }}>
-        //         <a href="/" className="navbar-brand d-flex me-auto"><h3>Ecommerce</h3></a>
-        //         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsingNavbar3">
-        //             <span className="navbar-toggler-icon"></span>
-        //         </button>
-        //         <ul className="navbar-nav justify-content-center">
-        //             <li className="nav-item active">
-        //                 <a className="nav-link" href="#"><h6>Categories</h6></a>
-        //             </li>
-        //             <li className="nav-item">
-        //                 <a className="nav-link" href="#"><h6>Sale</h6></a>
-        //             </li>
-        //             <li className="nav-item">
-        //                 <a className="nav-link" href="#"><h6>Clearance</h6></a>
-        //             </li>
-        //             <li className="nav-item">
-        //                 <a className="nav-link" href="#"><h6>New Stock</h6></a>
-        //             </li>
-        //             <li className="nav-item">
-        //                 <a className="nav-link" href="#"><h6>Trending</h6></a>
-        //             </li>
-        //         </ul>
-        //         <ul className="nav navbar-nav ms-auto justify-content-end">
-        //             <li className="nav-item">
-        //                 <a className="nav-link" href="#">Help</a>
-        //             </li>
-        //             <li className="nav-item">
-        //                 <a className="nav-link" href="#">Order & Returns</a>
-        //             </li>
-        //             {user && <li className="nav-item dropdown">
-        //                 <a className="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> {user?.data?.name} </a>
-        //                 <ul onClick={() => {
-        //                     localStorage.clear();
-        //                     setToken(null);
-        //                     setUser(null);
-        //                     navigate("/login");
-        //                 }} class="dropdown-menu dropdown-menu-lg-end">
-        //                     <button className="btn" type="button">Logout</button>
-        //                 </ul>
-        //             </li>}
-        //         </ul>
-        //     </div>
-        // </nav>
-
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
             <div className="container" style={{ margin: '0px', maxWidth: '100%' }}>
                 <Link to="/" style={{ width: '36%' }} className="navbar-brand"><h3 >Ecommerce</h3></Link>
