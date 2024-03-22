@@ -38,7 +38,7 @@ const VerifyOtp = (props) => {
       };
 
     return (
-        <div style={{ width: '600px' }} className="card text-center container my-5 shadow p-3 mb-5 bg-body-tertiary rounded">
+        <div style={{ maxWidth: '600px' }} className="card text-center container my-5 shadow p-3 mb-5 bg-body-tertiary rounded">
 
             <div className='card-body'>
                 <h2 className="card-title">Verify your email</h2>
@@ -50,6 +50,7 @@ const VerifyOtp = (props) => {
                         onChange={setOtp}
                         numInputs={8}
                         renderSeparator={<span>-</span>}
+                        inputType='number'
                         renderInput={(props) => <input {...props} />}
                         inputStyle={{
                             width: "50px",
