@@ -75,7 +75,7 @@ export class LoginController {
                 code: OK,
                 success: true,
                 message: "Login success!",
-                data: { email: user[0].email },
+                data: { email: user[0].email, name: user[0].name },
                 token,
             });
         } catch (error) {

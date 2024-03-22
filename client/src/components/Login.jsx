@@ -5,7 +5,7 @@ import { asyncWrap } from "../utils/utils";
 import { useNavigate } from "react-router-dom";
 import { setToken } from "../../axiosDefaults";
 import { useAuth } from '../context/auth-context';
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom"
 
 const Login = () => {
 
@@ -37,7 +37,7 @@ const Login = () => {
     }
 
     else {
-      Swal.fire(result.data.message)
+      // Swal.fire(result.data.message)
       if (setUser) setUser(result.data);
       setToken(result.data.token);
       navigate("/user-interest");
@@ -46,7 +46,7 @@ const Login = () => {
 
 
   return (
-    <div style={{ width: '800px' }} className="container my-5 shadow p-3 mb-5 bg-body-tertiary rounded">
+    <div style={{ maxWidth: '800px' }} className="container my-5 shadow p-3 mb-5 bg-body-tertiary rounded">
       <form className='p-5'>
         <h1 className='text-center'>Login</h1>
         <h4 className='text-center'>Welcome back to ECOMMERCE</h4>
@@ -65,10 +65,7 @@ const Login = () => {
           }} type="submit" className="btn btn-secondary">Login</button>
         </div>
       </form>
-      <div className='text-center' onClick={(e) => {
-        e.preventDefault();
-        navigate('/login');
-      }}>Don't have an account?   <b>  <Link to={'/signup'}>SIGN UP</Link> </b></div>
+      <div className='text-center' >Don't have an account?   <b>  <Link to={'/signup'}>SIGN UP</Link> </b></div>
     </div>
   )
 }

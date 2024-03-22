@@ -69,7 +69,7 @@ const Interest = () => {
     fetchInterestData()
   }, [pageNo])
   return (
-    <div style={{ width: '800px' }} className="container my-5 shadow p-3 mb-5 bg-body-tertiary rounded">
+    <div style={{ maxWidth: '800px' }} className="container my-5 shadow p-3 mb-5 bg-body-tertiary rounded">
       <h1 className='text-center'>Please mark your interests!</h1>
       <p className='text-center'>We will keep you notified</p>
 

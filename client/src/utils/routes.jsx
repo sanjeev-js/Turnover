@@ -10,6 +10,7 @@ export const LoggedInRouter = () =>
             children: [
                 { path: "*", element: <Navigate to="user-interest" replace /> },
                 { path: "user-interest", element: <Interest /> },
+                { path: '/', element: <Navigate to="/user-interest" /> },
             ]
         },
     ])
