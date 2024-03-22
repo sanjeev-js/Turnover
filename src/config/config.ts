@@ -1,7 +1,10 @@
 import dotenv from 'dotenv';
 
-dotenv.config({path: '../../.env'});
 
+// for loading env variables at the time of running migration 
+// dotenv.config({path: '../../.env'});
+
+// for normal process
 dotenv.config();
 
 export const DB = {

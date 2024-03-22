@@ -11,7 +11,7 @@ export async function up(knex: Knex): Promise<void> {
             // actual email length should be 255 but using 500 because faker is generating long format emails.
             table.string('email', 500).notNullable().unique();
             table.string('password').notNullable();
-            table.string("emailOtp", 255);
+            table.string("emailOtp", 10);
             table.boolean('isEmailVerified').defaultTo(false);
             table.boolean('isActive').defaultTo(true);
             table.timestamps(true, true);

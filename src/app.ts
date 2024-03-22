@@ -1,9 +1,11 @@
 import { Server } from '@overnightjs/core';
+import express from 'express';
 import dotenv from 'dotenv';
 import { Server as httpServer } from 'http';
 import * as bodyParser from 'body-parser';
 import * as controllers from './controllers';
 import cors from 'cors';
+import path from "path";
 import { morganErrorHandler, morganSuccessHandler } from './config/morgan';
 import logger from './config/logger';
 dotenv.config();
@@ -15,9 +17,15 @@ export class ExpressServer extends Server {
         super();
         this.setupExpress();
         this.setupControllers();
+
+        // FOR Handling client side routing i.e browser hard refresh
+        this.app.get('*', (req, res) => {
+            res.sendFile(path.resolve('public', 'index.html'));
+        });
     }
 
     private setupExpress(): void {
+        this.app.use(express.static('public'));
         this.app.use(bodyParser.json({ limit: '900mb' }));
         this.app.use(bodyParser.urlencoded({ extended: true }));
         this.app.use(morganErrorHandler);

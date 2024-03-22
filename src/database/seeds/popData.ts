@@ -49,8 +49,6 @@ function generateUniqueProducts(count: number) {
 
 exports.seed = async function (knex: any) {
 
-    console.log(process.argv)
-
     const args = process.argv
         .slice(6)
         .map((arg) => arg.split("="))
@@ -61,7 +59,6 @@ exports.seed = async function (knex: any) {
 
     const table = args?.table || null;
     const count = args?.count || 10;
-    console.log(table, count);
 
     if (table === "users") {
         await knex(USERS).insert(userData(count));
